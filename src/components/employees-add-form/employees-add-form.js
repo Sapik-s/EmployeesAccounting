@@ -16,9 +16,15 @@ const EmployeesAddForm = ({onAddUser}) => {
 
     function onAddNewUser(event) {
         event.preventDefault();
-
+        console.log(name);
         if (!name <= 0 && !salary <= 0 && name.trim() !== '') {
-            const newUser = {name: name, salary: salary, increase: false, star: false, id: Math.round(Math.random() * (100 - 1) + 1)};
+            const newUser = {
+                name: name,
+                salary: salary,
+                increase: false,
+                star: false,
+                id: Math.round(Math.random() * (100 - 1) + 1)
+            };
             onAddUser(newUser);
         }
         setSalary("");

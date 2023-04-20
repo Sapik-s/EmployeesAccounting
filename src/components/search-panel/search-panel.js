@@ -2,7 +2,8 @@ import './search-panel.css';
 
 const SearchPanel = ({onSearch}) => {
     function getValueEmployees(e) {
-        onSearch(e.target.value);
+        let nameValue = e.target.value.toLowerCase().trim();
+        onSearch(nameValue);
     }
     return (
         <input type="text"

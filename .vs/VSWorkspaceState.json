@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\components",
+    "\\src\\components\\app",
+    "\\src\\components\\app-filter",
+    "\\src\\components\\app-info",
+    "\\src\\components\\employees-add-form",
+    "\\src\\components\\employees-list",
+    "\\src\\components\\employees-list-item",
+    "\\src\\components\\search-panel"
+  ],
+  "PreviewInSolutionExplorer": false
+}

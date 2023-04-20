@@ -12,7 +12,7 @@ function App() {
     const data = [
         {name: 'John S.', salary: 1000, increase: false, star: false, id: 1},
         {name: 'Alex D.', salary: 300, increase: true, star: true, id: 2},
-        {name: 'Rick G.', salary: 240, increase: true, star: true, id: 3},
+        {name: 'Rick G.', salary: 240, increase: true, star: true, id: 3}
     ];
 
     const [dataState, setDataState] = useState(data);
@@ -42,7 +42,10 @@ function App() {
     function searchEmployees(value) {
         const newData = data.filter(i => i.name.toLowerCase().indexOf(value) > -1);
         setDataState(newData);
-        console.log(newData);
+    }
+
+    function onIncreaseActive(value) {
+        console.log(value);
     }
 
     let starSum = dataState.filter(i => i.star).length;
@@ -53,7 +56,7 @@ function App() {
 
             <div className="search-panel">
                 <SearchPanel onSearch={searchEmployees}/>
-                <AppFilter/>
+                <AppFilter increaseState={onIncreaseActive}/>
             </div>
 
             <EmployeesList
